@@ -5,3 +5,9 @@ Now, if there is no customer, then the barber sleeps in his own chair(barber cha
 The sleeping barber problem may lead to a race condition. This problem has occurred because of the actions of both barber and customer.
 
 Implementations in Swift with Mutex.
+Two barbers (two queues) and 3 clients queues.
+
+More detail about a problem: 
+
+https://www.codingninjas.com/codestudio/library/sleeping-barber-problem
+https://en.wikipedia.org/wiki/Sleeping_barber_problem

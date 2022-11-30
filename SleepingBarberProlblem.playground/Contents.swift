@@ -31,6 +31,9 @@ let client = DispatchSemaphore(value: 0)
 let seatsBelt = DispatchSemaphore(value: 0)
 
 let barberQueue = DispatchQueue(label: "com.barberQueue", attributes: .concurrent)
+
+let secondBarberQueue = DispatchQueue(label: "com.barberQueue", attributes: .concurrent)
+
 let clientsQueue = DispatchQueue(label: "com.clientsQueue", attributes: .concurrent)
 let addditionalClientsQueue = DispatchQueue(label: "com.addditionalClientsQueue", attributes: .concurrent)
 let addditionalClientsQueue_2 = DispatchQueue(label: "com.addditionalClientsQueue_2", attributes: .concurrent)
@@ -75,6 +78,10 @@ func clients(index: Int) {
 
 barberQueue.async {
     barber(index: 1)
+}
+
+secondBarberQueue.async {
+    barber(index: 2)
 }
 
 clientsQueue.async {
